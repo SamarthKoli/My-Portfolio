@@ -133,6 +133,7 @@ body {
   margin: 20px;
 }
 
+
 .AboutMeButton {
   font-family: "Pixelify Sans", serif;
   font-optical-sizing: auto;
@@ -151,6 +152,12 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 2rem;
+}
+.AboutMeButton img{
+  width: 60px; /* Adjust the size of the image */
+  height: 34px; /* Ensure the image is square */
+  object-fit: contain;
+
 }
 
 .AboutMeButton:hover {
@@ -219,11 +226,44 @@ body {
     overflow: auto;
   }
   .AboutMeButton{
+    
     font-size: 1.2rem;
   }
 }
 
 
+.slider {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  overflow-y: auto; /* Enable vertical scrolling */
+  gap: 15px;
+  height: 300px; /* Adjust height as needed */
+  padding: 10px;
+  background-color: #2e2b47;
+  border-radius: 10px;
+  scrollbar-width: none; /* Hides scrollbar on Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Hides scrollbar on Chrome */
+}
+
+.slider-item {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.slider-item:hover {
+  transform: scale(1.1);
+}
+
+.slider-item img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
 
 .footer{
     font-family: Arial, Helvetica, sans-serif;
