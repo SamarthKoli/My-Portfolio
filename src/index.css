@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
   margin: 0;
   padding: 4px;
@@ -63,7 +63,7 @@ body {
 
 
 .Profile-container{
-  background-color: hsl(196, 61%, 76%);
+  background-color:hsl(243, 80%, 65%);  ;
   color: black;
   box-shadow: 8px 8px hsl(0, 77%, 66%);
   margin-top: 40px;
@@ -80,7 +80,7 @@ body {
   
   height: 0.1px;
   padding: 0;
-  border: 1px solid grey ;
+  border: 0.5px solid hsl(0, 77%, 66%) ;
 }
 
 
@@ -121,7 +121,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   
 }
 
@@ -129,6 +129,7 @@ body {
 
 
 .info-container {
+  
   margin: 20px;
 }
 
@@ -136,10 +137,9 @@ body {
   font-family: "Pixelify Sans", serif;
   font-optical-sizing: auto;
   font-weight: 600;
-  font-size: 12rem;
   font-style: normal;
   border-radius: 10%;
-  width: 200px;
+  width: 60%;
   background-color: hsl(196, 61%, 76%);
   box-shadow: 5px 5px hsl(0, 77%, 66%);
   border: none;
@@ -150,7 +150,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 2rem;
 }
 
 .AboutMeButton:hover {
@@ -161,22 +161,66 @@ body {
 }
 
 .dropdown-content {
+ 
   margin: 10px auto;
-  padding: 0 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 20px;
+  font-size: larger;
+  border-radius: 10px;
+  background-color: #2e2b47; /* Optional dark background */
   max-height: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-  text-align: left;
+  text-align:center;
   opacity: 0;
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  color: white;
+   /* Gradient border animation */
+   background: #2e2b47; /* same as background color */
+   border: 5px solid transparent; 
+   background-clip: padding-box;
+   animation: rgb-running-border 8s linear infinite; /* RGB running light animation */
+}
+.dropdown-content p{
+  line-height: 1.8;
 }
 
 .dropdown-content.show {
   max-height: 200px; /* Adjust based on your content size */
   padding: 10px;
   opacity: 1;
+}
+/* Keyframes for running RGB light around the border */
+@keyframes rgb-running-border {
+  0% {
+    border-image: linear-gradient(45deg, rgba(255, 182, 193, 0.7), rgba(173, 216, 230, 0.7), rgba(144, 238, 144, 0.7), rgba(255, 223, 186, 0.7)) 1;
+  }
+  25% {
+    border-image: linear-gradient(45deg, rgba(173, 216, 230, 0.7), rgba(144, 238, 144, 0.7), rgba(255, 223, 186, 0.7), rgba(255, 105, 180, 0.7)) 1;
+  }
+  50% {
+    border-image: linear-gradient(45deg, rgba(144, 238, 144, 0.7), rgba(255, 223, 186, 0.7), rgba(255, 105, 180, 0.7), rgba(173, 216, 230, 0.7)) 1;
+  }
+  75% {
+    border-image: linear-gradient(45deg, rgba(255, 223, 186, 0.7), rgba(255, 105, 180, 0.7), rgba(173, 216, 230, 0.7), rgba(144, 238, 144, 0.7)) 1;
+  }
+  100% {
+    border-image: linear-gradient(45deg, rgba(255, 105, 180, 0.7), rgba(255, 182, 193, 0.7), rgba(173, 216, 230, 0.7), rgba(144, 238, 144, 0.7)) 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .dropdown-content{
+    overflow: auto;
+  }
+  .AboutMeButton{
+    font-size: 1.2rem;
+  }
 }
 
 

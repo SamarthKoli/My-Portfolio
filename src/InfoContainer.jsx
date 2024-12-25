@@ -12,7 +12,7 @@ function AboutMeButton() {
       <button
         className="AboutMeButton"
         onClick={() => handleToggle("aboutMe")}
-        
+
       >
         About Me
       </button>
@@ -21,7 +21,15 @@ function AboutMeButton() {
           activeSection === "aboutMe" ? "show" : ""
         }`}
       >
-        <p>Hello! I'm a passionate developer with a love for coding and creating innovative solutions.</p>
+        <p>
+
+👋 Welcome to My Portfolio!
+I’m Samarth Koli, a passionate and dedicated Computer Science enthusiast currently pursuing my B.Tech in CSE at Walchand Institute of Technology, Solapur. My journey in technology began with a Diploma in CSE from A.G. Patil Polytechnic, Solapur, where I built a solid foundation in programming and problem-solving.
+
+This portfolio showcases my projects, skills, and achievements as I explore the ever-evolving tech world. Whether it's coding, creating innovative solutions, or collaborating on impactful ideas, I’m always eager to push boundaries and grow.
+
+Feel free to explore my work and reach out if you'd like to connect!</p>
+
       </div>
 
       <button
