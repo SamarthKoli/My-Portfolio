@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 4px;
+}
+
+body {
+  background-color: #0D1117;
+ 
+}
+
+.header-title {
+  text-align: center;
+  border: 1px solid black;
+  padding: 0px;
+  margin: 0px;
+  background-color: hsl(196, 61%, 76%);
+  border-radius: 20px;
+  box-shadow: 8px 8px hsl(0, 77%, 66%);
+  border: none;
+}
+
+.header-title h1 {
+  font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 3.5rem;
+  font-style: normal;
+  overflow: hidden; /* Ensures text is clipped */
+  white-space: nowrap; /* Prevents text wrapping */
+  border-right: 3px solid black; /* Cursor effect */
+  display: inline-block; /* Keeps width limited to text */
+  animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Adjust to match the text content */
+  }
+}
+
+@keyframes blink {
+  60% {
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        padding: 10px;
+        box-shadow: 4px 4px hsl(0, 77%, 66%);
+    }
+
+    .header-title h1 {
+        font-size: 1.8rem; /* Reduce font size for smaller screens */
+        animation: typing 5s steps(20, end), blink 0.8s step-end infinite;
+    }
+}
+
+
+.Profile-container{
+  background-color: hsl(196, 61%, 76%);
+  color: black;
+  box-shadow: 8px 8px hsl(0, 77%, 66%);
+  margin-top: 40px;
+  text-align: center;
+  max-width: 20%;
+  border-radius: 5%;
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+  
+
+}
+
+.Profile-container hr{
+  
+  height: 0.1px;
+  padding: 0;
+  border: 1px solid grey ;
+}
+
+
+.Profile-MainContainer{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+.profile-image{
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .Profile-container {
+    margin-top: 5px;
+      max-width: 80%; /* Increase width for smaller screens */
+      margin-top: 50px; /* Adjust margin for smaller screens */
+      border-radius: 10%; /* Slightly larger rounding for a softer look */
+  }
+
+  .profile-image {
+      width: 150px; /* Reduce the image size */
+      height: 150px;
+  }
+}
+
+
+.info-container{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+
+
+
+.info-container {
+  margin: 20px;
+}
+
+.AboutMeButton {
+  font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 12rem;
+  font-style: normal;
+  border-radius: 10%;
+  width: 200px;
+  background-color: hsl(196, 61%, 76%);
+  box-shadow: 5px 5px hsl(0, 77%, 66%);
+  border: none;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.AboutMeButton:hover {
+
+  background-color: hsl(196, 61%, 76%);
+  box-shadow: 5px 5px  hsl(327, 68%, 73%);
+  color: #0D1117;
+}
+
+.dropdown-content {
+  margin: 10px auto;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  text-align: left;
+  opacity: 0;
+}
+
+.dropdown-content.show {
+  max-height: 200px; /* Adjust based on your content size */
+  padding: 10px;
+  opacity: 1;
+}
+
+
+
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(196, 61%, 76%);
+    text-align: center;
+    margin-top: 100vh;
+    border-radius: 20px;
+    box-shadow: 5px 5px hsl(0, 77%, 66%);
+}
