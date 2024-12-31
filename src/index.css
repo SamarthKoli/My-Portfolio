@@ -15,7 +15,7 @@ body {
   border: 1px solid black;
   padding: 0px;
   margin: 0px;
-  background-color: hsl(196, 61%, 76%);
+  background-color: hsl(243, 80%, 65%) ;
   border-radius: 20px;
   box-shadow: 8px 8px hsl(0, 77%, 66%);
   border: none;
@@ -63,7 +63,7 @@ body {
 
 
 .Profile-container{
-  background-color:hsl(243, 80%, 65%);  ;
+  background-color:hsl(243, 80%, 65%)  ;
   color: black;
   box-shadow: 8px 8px hsl(0, 77%, 66%);
   margin-top: 40px;
@@ -174,9 +174,9 @@ body {
   font-size: larger;
   border-radius: 10px;
   background-color: #2e2b47; /* Optional dark background */
-  max-height: 0;
+  max-height: 50px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow: auto;
   transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
   text-align:center;
   opacity: 0;
@@ -265,11 +265,93 @@ body {
   margin-bottom: 10px;
 }
 
+.dropdown-content ul {
+  list-style-type: disc;
+  padding-left: 20px; /* Add padding to align bullets correctly */
+  color: #fff; /* Bullet points and text in white for a dark theme */
+  font-size: 20px;
+}
+
+.dropdown-content li {
+  margin-bottom: 8px; /* Adds space between list items */
+}
+
+.dropdown-content a{
+  color: #fff; /* Bullet points and text in white for a dark theme */
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.ContactMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+  flex-wrap: wrap;
+  padding: 10 px;
+  min-height: 100px;
+}
+
+.ContactMe a {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.ContactMe img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Vibrate effect */
+@keyframes vibrate {
+  0% { transform: translate(0); }
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  75% { transform: translate(-2px, -2px); }
+  100% { transform: translate(2px, 2px); }
+}
+
+.ContactMe a:hover img {
+  animation: vibrate 0.2s linear infinite; /* Apply the vibration animation */
+}
+
+.ContactMe a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .ContactMe {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .ContactMe img {
+    width: 140px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ContactMe {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ContactMe img {
+    width:70px;
+    height: 70px;
+  }
+}
+
+
+
 .footer{
     font-family: Arial, Helvetica, sans-serif;
     background-color: hsl(196, 61%, 76%);
     text-align: center;
-    margin-top: 100vh;
+    margin-top: 20vh;
     border-radius: 20px;
     box-shadow: 5px 5px hsl(0, 77%, 66%);
 }

@@ -3,13 +3,13 @@ import reactimg from './assets/react-original-wordmark.svg';
 import JSimg from './assets/javascript-original.svg';
 import pythonimg from './assets/python-original.svg';
 import javaimg from './assets/java-original.svg';
-import htmlimg from './assets/html5-original-wordmark.svg';
-import cssimg from './assets/css3-original-wordmark.svg';
 import mysqlimg from './assets/mysql-original-wordmark.svg';
 import nodejsimg from './assets/nodejs-original-wordmark.svg';
 import spimg from './assets/springboot.svg';
 import aboutme from './assets/aboutme.png'
 import tools from './assets/tools.png'
+import badge from './assets/achievement.png'
+import project from './assets/project.png';
 
 
 function AboutMeButton() {
@@ -49,14 +49,11 @@ function AboutMeButton() {
         className="AboutMeButton"
         onClick={() => handleToggle("aboutMe")}
       >
-       
         About Me
-        <img  src={aboutme} alt="AboutMeImage" />
+        <img src={aboutme} alt="AboutMeImage" />
       </button>
       <div
-        className={`dropdown-content ${
-          activeSection === "aboutMe" ? "show" : ""
-        }`}
+        className={`dropdown-content ${activeSection === "aboutMe" ? "show" : ""}`}
       >
         <p>
           👋 Welcome to My Portfolio!  
@@ -77,14 +74,12 @@ function AboutMeButton() {
       <button
         className="AboutMeButton"
         onClick={() => handleToggle("languagesAndTools")}
-      > <img src={tools} alt="Langauage and tools" />
+      > 
+        <img src={tools} alt="Langauage and tools" />
         Languages and Tools
-       
       </button>
       <div
-        className={`dropdown-content ${
-          activeSection === "languagesAndTools" ? "show" : ""
-        }`}
+        className={`dropdown-content ${activeSection === "languagesAndTools" ? "show" : ""}`}
       >
         <p>Here are some of the languages and tools I have worked with:</p>
         <div className="slider" ref={sliderRef}>
@@ -125,16 +120,42 @@ function AboutMeButton() {
         onClick={() => handleToggle("achievements")}
       >
         Achievements
+        <img src={badge} alt="achievements" />
       </button>
       <div
-        className={`dropdown-content ${
-          activeSection === "achievements" ? "show" : ""
-        }`}
+        className={`dropdown-content ${activeSection === "achievements" ? "show" : ""}`}
       >
         <p>
-          I was a Technical Content Writer Intern at GeeksforGeeks and
-          contributed numerous technical articles.
+          Here are some of my key achievements:
         </p>
+        <ul>
+          <li>Technical Content Writer Intern at GeeksforGeeks</li>
+          <li>Contributed numerous technical articles to GeeksforGeeks</li>
+          <li>Participated in multiple hackathons and coding competitions</li>
+          <li>Successfully built and deployed several personal projects</li>
+          <li>Collaborated with cross-functional teams to deliver high-impact solutions</li>
+        </ul>
+      </div>
+
+      {/* Projects Button */}
+      <button
+        className="AboutMeButton"
+        onClick={() => handleToggle("projects")}
+      >
+        Projects
+        <img src={project} alt="projects" />
+      </button>
+      <div
+        className={`dropdown-content ${activeSection === "projects" ? "show" : ""}`}
+      >
+        <p>
+          Here are some of the projects I have worked on:
+        </p>
+        <ul>
+          <a href="https://datawiz-samarthkoli.streamlit.app/"><li>DataWiz- Streamlined Exploratory Data Analysis (EDA) Tool</li></a>
+           <a href="https://github.com/SamarthKoli/Captcha_Backend"> <li>AI Based Captcha Detection System</li></a>
+           <a href="https://get-weather-app-kappa.vercel.app/"> <li>Get-Weather Weather forcasting web app</li></a>
+        </ul>
       </div>
     </div>
   );
