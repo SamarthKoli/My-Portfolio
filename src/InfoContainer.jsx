@@ -130,10 +130,9 @@ function AboutMeButton() {
         </p>
         <ul>
           <li>Technical Content Writer Intern at GeeksforGeeks</li>
-          <li>Contributed numerous technical articles to GeeksforGeeks</li>
-          <li>Participated in multiple hackathons and coding competitions</li>
-          <li>Successfully built and deployed several personal projects</li>
-          <li>Collaborated with cross-functional teams to deliver high-impact solutions</li>
+          <li>Winner of National Level Web Design Compititon at AGTECHFEST 2k24</li>
+          <li>Made an Open Source Contribution in famous repository named Eclipse(IDE) Jkube</li>
+          <li>Got Selected as Open Source Contributor for GGSOC Organization</li>
         </ul>
       </div>
 
